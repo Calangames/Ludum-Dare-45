@@ -22,7 +22,7 @@ public class CameraFollow : MonoBehaviour
         float cameraHalfSizeY = thisCamera.orthographicSize;
         float cameraHalfSizeX = cameraHalfSizeY * aspect;
         x = Mathf.Clamp(player.position.x, boxCollider.bounds.min.x + cameraHalfSizeX, boxCollider.bounds.max.x - cameraHalfSizeX);
-        y = Mathf.Clamp(player.position.y, boxCollider.bounds.min.y + cameraHalfSizeY, boxCollider.bounds.max.y - cameraHalfSizeY);
+        y = Mathf.Clamp(player.position.y + 1f, boxCollider.bounds.min.y + cameraHalfSizeY, boxCollider.bounds.max.y - cameraHalfSizeY);
         transform.position = new Vector3(x, y, transform.position.z);
     }
 }
