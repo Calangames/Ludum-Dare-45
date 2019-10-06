@@ -1,19 +1,37 @@
 fileFormatVersion: 2
-guid: 2ae0e403dbb32a140b8c2ed9543d59e8
+guid: b3f168b44941fbd4d8d454ca10724483
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5717577069214730201
-    second: image_14_0
+      213: -9172890152599389736
+    second: LD45_run_sheet_0
   - first:
-      213: 1748118082988479525
-    second: image_14_1
+      213: 6123631344736667256
+    second: LD45_run_sheet_1
   - first:
-      213: 1400748733477931614
-    second: image_14_2
+      213: -8473372266630472106
+    second: LD45_run_sheet_2
   - first:
-      213: 6961659320042172033
-    second: image_14_3
+      213: 690013690802023244
+    second: LD45_run_sheet_3
+  - first:
+      213: 135925818425985875
+    second: LD45_run_sheet_4
+  - first:
+      213: 14699194676899492
+    second: LD45_run_sheet_5
+  - first:
+      213: -2907446989680737751
+    second: LD45_run_sheet_6
+  - first:
+      213: 1569015415025721407
+    second: LD45_run_sheet_7
+  - first:
+      213: -4376016328681537151
+    second: LD45_run_sheet_8
+  - first:
+      213: -1133414336704883522
+    second: LD45_run_sheet_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -122,55 +140,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: image_14_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4921a50dccb2514da2be692b61902d5
-      internalID: 5717577069214730201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: image_14_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7c3451c3cc6a8f43ba0e26b5eb1ca21
-      internalID: 1748118082988479525
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: image_14_2
+      name: LD45_run_sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dbb18aa1f6707e4f80c447a0e81c47e
-      internalID: 1400748733477931614
+      spriteID: 8dc17e26422210943998bb574b4c2863
+      internalID: -9172890152599389736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: image_14_3
+      name: LD45_run_sheet_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 34
         y: 0
-        width: 32
-        height: 32
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,8 +175,176 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd7921a21beebd84d88b58931389e65e
-      internalID: 6961659320042172033
+      spriteID: 18b9a93329f6b6446a4838a243b4ea01
+      internalID: 6123631344736667256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LD45_run_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ff73ba16cce8b4f8719f3ea59abee2
+      internalID: -8473372266630472106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LD45_run_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d39121796346594dbab63db20d935fa
+      internalID: 690013690802023244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LD45_run_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c57e4462ebb784789709ce2646505c
+      internalID: 135925818425985875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LD45_run_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c8ccd5fe522d4439d852910c9203f5
+      internalID: 14699194676899492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LD45_run_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1d498b43c506c4f8162954ba034b2d
+      internalID: -2907446989680737751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LD45_run_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294b81f49f50c6d4c907eccf3901c107
+      internalID: 1569015415025721407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LD45_run_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2b00608dc20934289b546b9e1b9f11
+      internalID: -4376016328681537151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LD45_run_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50902793e29265f43a04d45726756c33
+      internalID: -1133414336704883522
       vertices: []
       indices: 
       edges: []

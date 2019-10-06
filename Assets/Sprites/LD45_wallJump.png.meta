@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: d560a51ab5d9cb146a7c77c19e986585
+guid: e89e5fd11240cbf498c201d223c3acef
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5365940639573136927
-    second: LD45_jumpStart_anim_0
+      213: -6558983335183546386
+    second: LD45_wallJump_0
   - first:
-      213: 3341361412802660078
-    second: LD45_jumpStart_anim_1
+      213: 2093348464828954631
+    second: LD45_wallJump_1
   - first:
-      213: -8215091190270212447
-    second: LD45_jumpStart_anim_2
+      213: -2124599506426910444
+    second: LD45_wallJump_2
   - first:
-      213: -2314352899921893027
-    second: LD45_jumpStart_anim_3
+      213: -722939643266530512
+    second: LD45_wallJump_3
   - first:
-      213: 9062288345866865663
-    second: LD45_jumpStart_anim_4
+      213: -891987534638151433
+    second: LD45_wallJump_4
   - first:
-      213: 2075788255795842184
-    second: LD45_jumpStart_anim_5
+      213: 294053589818994582
+    second: LD45_wallJump_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LD45_jumpStart_anim_0
+      name: LD45_wallJump_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f86928e4c356964984c8d9c222ebbd4
-      internalID: 5365940639573136927
+      spriteID: cd1e034257c56534abf0ead1ed992313
+      internalID: -6558983335183546386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LD45_jumpStart_anim_1
+      name: LD45_wallJump_1
       rect:
         serializedVersion: 2
         x: 38
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea218e631b67e6848beaf2eab2bac9d1
-      internalID: 3341361412802660078
+      spriteID: af5806cd23a8e5c43acc321c550b4357
+      internalID: 2093348464828954631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LD45_jumpStart_anim_2
+      name: LD45_wallJump_2
       rect:
         serializedVersion: 2
         x: 76
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07c5daed6090dc54f8821661ddadf55a
-      internalID: -8215091190270212447
+      spriteID: 50e332d1da97c8b4988b29a7aa144c41
+      internalID: -2124599506426910444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LD45_jumpStart_anim_3
+      name: LD45_wallJump_3
       rect:
         serializedVersion: 2
         x: 114
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbe7d8812c4472645a23f630adcd4a36
-      internalID: -2314352899921893027
+      spriteID: fbdeae5204c37c94590467d34a4a1f25
+      internalID: -722939643266530512
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LD45_jumpStart_anim_4
+      name: LD45_wallJump_4
       rect:
         serializedVersion: 2
         x: 152
@@ -226,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e437921b1210e9b47a3c0f47f0b004d5
-      internalID: 9062288345866865663
+      spriteID: e4e6b0cb706d92940b3dec576cc6b5a0
+      internalID: -891987534638151433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LD45_jumpStart_anim_5
+      name: LD45_wallJump_5
       rect:
         serializedVersion: 2
         x: 190
@@ -247,8 +247,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aac90a4b34482d24abcf98a2804d824b
-      internalID: 2075788255795842184
+      spriteID: 2bab3dcc7304e6046bd94ac87bc3d295
+      internalID: 294053589818994582
       vertices: []
       indices: 
       edges: []

@@ -115,8 +115,8 @@ public class Movement : MonoBehaviour
 
         if ((int)unlockedMoves >= 3 && Input.GetButtonDown("Fire1") && !hasDashed)
         {
-            if(xRaw != 0 || yRaw != 0)
-                Dash(xRaw, yRaw);
+            if(xRaw != 0)
+                Dash(xRaw);
         }
 
         if (coll.onGround && !groundTouch)
@@ -158,7 +158,7 @@ public class Movement : MonoBehaviour
         jumpParticle.Play();
     }
 
-    private void Dash(float x, float y)
+    private void Dash(float x)
     {
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
@@ -169,7 +169,7 @@ public class Movement : MonoBehaviour
         anim.SetTrigger("dash");
 
         rb.velocity = Vector2.zero;
-        Vector2 dir = new Vector2(x, y);
+        Vector2 dir = new Vector2(x, 0f);
 
         rb.velocity += dir.normalized * dashSpeed;
         StartCoroutine(DashWait());
@@ -205,9 +205,9 @@ public class Movement : MonoBehaviour
 
     private void WallJump()
     {
+        anim.SetTrigger("wallJump");
         if ((side == 1 && coll.onRightWall) || side == -1 && !coll.onRightWall)
         {
-            side *= -1;
             anim.Flip(side);
         }
 
@@ -224,7 +224,7 @@ public class Movement : MonoBehaviour
     private void WallSlide()
     {
         if(coll.wallSide != side)
-         anim.Flip(side * -1);
+         anim.Flip(side);
 
         if (!canMove)
             return;

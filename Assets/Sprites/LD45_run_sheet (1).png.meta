@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: d560a51ab5d9cb146a7c77c19e986585
+guid: 107bb32cbbfbf1244b71abbb2bfb48f9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5365940639573136927
-    second: LD45_jumpStart_anim_0
+      213: -1571135902733496151
+    second: LD45_run_sheet (1)_0
   - first:
-      213: 3341361412802660078
-    second: LD45_jumpStart_anim_1
+      213: 4706020509465224246
+    second: LD45_run_sheet (1)_1
   - first:
-      213: -8215091190270212447
-    second: LD45_jumpStart_anim_2
+      213: -4146248882975772151
+    second: LD45_run_sheet (1)_2
   - first:
-      213: -2314352899921893027
-    second: LD45_jumpStart_anim_3
-  - first:
-      213: 9062288345866865663
-    second: LD45_jumpStart_anim_4
-  - first:
-      213: 2075788255795842184
-    second: LD45_jumpStart_anim_5
+      213: 2533335035264922649
+    second: LD45_run_sheet (1)_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -128,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LD45_jumpStart_anim_0
+      name: LD45_run_sheet (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 38
-        height: 38
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f86928e4c356964984c8d9c222ebbd4
-      internalID: 5365940639573136927
+      spriteID: 52b32e434d8266e49ae80e899b94e9f0
+      internalID: -1571135902733496151
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LD45_jumpStart_anim_1
+      name: LD45_run_sheet (1)_1
       rect:
         serializedVersion: 2
-        x: 38
+        x: 34
         y: 0
-        width: 38
-        height: 38
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea218e631b67e6848beaf2eab2bac9d1
-      internalID: 3341361412802660078
+      spriteID: 19f272b96ca11e045b8671248a9ab873
+      internalID: 4706020509465224246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LD45_jumpStart_anim_2
+      name: LD45_run_sheet (1)_2
       rect:
         serializedVersion: 2
-        x: 76
+        x: 68
         y: 0
-        width: 38
-        height: 38
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07c5daed6090dc54f8821661ddadf55a
-      internalID: -8215091190270212447
+      spriteID: f2c762e6e680f804daa95fcaa8aebdf9
+      internalID: -4146248882975772151
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LD45_jumpStart_anim_3
+      name: LD45_run_sheet (1)_3
       rect:
         serializedVersion: 2
-        x: 114
+        x: 102
         y: 0
-        width: 38
-        height: 38
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,50 +199,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbe7d8812c4472645a23f630adcd4a36
-      internalID: -2314352899921893027
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LD45_jumpStart_anim_4
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 0
-        width: 38
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e437921b1210e9b47a3c0f47f0b004d5
-      internalID: 9062288345866865663
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LD45_jumpStart_anim_5
-      rect:
-        serializedVersion: 2
-        x: 190
-        y: 0
-        width: 38
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aac90a4b34482d24abcf98a2804d824b
-      internalID: 2075788255795842184
+      spriteID: 57ef91a208806824a9c4bd5e5d739ac0
+      internalID: 2533335035264922649
       vertices: []
       indices: 
       edges: []
