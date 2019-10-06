@@ -27,7 +27,8 @@ public class AnimationScript : MonoBehaviour
         anim.SetBool("wallSlide", move.wallSlide);
         anim.SetBool("canMove", move.canMove);
         anim.SetBool("isDashing", move.isDashing);
-
+        anim.SetBool("knockback", move.knockback);
+        anim.SetBool("dead", move.dead);
     }
 
     public void SetHorizontalMovement(float x,float y, float yVel)

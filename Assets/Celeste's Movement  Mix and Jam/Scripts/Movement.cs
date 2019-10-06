@@ -13,11 +13,13 @@ public class Movement : MonoBehaviour
 
     [Space]
     [Header("Stats")]
-    public float speed = 10;
-    public float jumpForce = 50;
-    public float slideSpeed = 5;
-    public float wallJumpLerp = 10;
-    public float dashSpeed = 20;
+    public float speed = 10f;
+    public float jumpForce = 50f;
+    public float knockbackForce = 4f;
+    public float slideSpeed = 5f;
+    public float wallJumpLerp = 10f;
+    public float dashSpeed = 20f;
+    public int life = 3;
     public UnlockedMoves unlockedMoves = UnlockedMoves.walk;
 
     public enum UnlockedMoves
@@ -36,11 +38,13 @@ public class Movement : MonoBehaviour
     public bool wallSlide;
     public bool isDashing;
     public bool knockback;
+    public bool dead;
 
     [Space]
 
     private bool groundTouch;
     private bool hasDashed;
+    private bool recentlyKnockbacked;
     private int remainingJumps;
 
     [Space]
@@ -71,6 +75,12 @@ public class Movement : MonoBehaviour
     {
         if (knockback)
         {
+            if (coll.onGround && !recentlyKnockbacked)
+            {
+                GroundTouch();
+                dead = life <= 0;
+                knockback = false;
+            }
             return;
         }
         float x = Input.GetAxis("Horizontal");
@@ -152,6 +162,18 @@ public class Movement : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Hazard") && !knockback)
+        {
+            StartCoroutine(KnockbackCooldown(0.1f));
+            knockback = true;
+            life--;
+            rb.velocity = Vector2.zero;
+            rb.velocity = new Vector2(Mathf.Sign(transform.position.x - other.transform.position.x), 4f) * knockbackForce;
+        }
+    }
+
     void GroundTouch()
     {
         hasDashed = false;
@@ -213,6 +235,7 @@ public class Movement : MonoBehaviour
         anim.SetTrigger("wallJump");
         if ((side == 1 && coll.onRightWall) || side == -1 && !coll.onRightWall)
         {
+            side *= -1;
             anim.Flip(side);
         }
 
@@ -229,7 +252,7 @@ public class Movement : MonoBehaviour
     private void WallSlide()
     {
         if(coll.wallSide != side)
-         anim.Flip(side);
+         anim.Flip(side * -1);
 
         if (!canMove)
             return;
@@ -275,6 +298,13 @@ public class Movement : MonoBehaviour
         canMove = false;
         yield return new WaitForSeconds(time);
         canMove = true;
+    }
+
+    IEnumerator KnockbackCooldown(float time)
+    {
+        recentlyKnockbacked = true;
+        yield return new WaitForSeconds(time);
+        recentlyKnockbacked = false;
     }
 
     void RigidbodyDrag(float x)
