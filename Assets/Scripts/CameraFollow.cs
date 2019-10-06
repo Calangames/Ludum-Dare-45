@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class CameraFollow : MonoBehaviour
 {
     public Transform player;
-    public Tilemap tilemap;
+    public BoxCollider2D boxCollider;
 
     private float aspect;
     private Camera thisCamera;
@@ -22,8 +21,8 @@ public class CameraFollow : MonoBehaviour
         float x, y;
         float cameraHalfSizeY = thisCamera.orthographicSize;
         float cameraHalfSizeX = cameraHalfSizeY * aspect;
-        x = Mathf.Clamp(player.position.x, tilemap.localBounds.min.x + cameraHalfSizeX, tilemap.localBounds.max.x - cameraHalfSizeX);
-        y = Mathf.Clamp(player.position.y, tilemap.localBounds.min.y + cameraHalfSizeY, tilemap.localBounds.max.y - cameraHalfSizeY);
+        x = Mathf.Clamp(player.position.x, boxCollider.bounds.min.x + cameraHalfSizeX, boxCollider.bounds.max.x - cameraHalfSizeX);
+        y = Mathf.Clamp(player.position.y, boxCollider.bounds.min.y + cameraHalfSizeY, boxCollider.bounds.max.y - cameraHalfSizeY);
         transform.position = new Vector3(x, y, transform.position.z);
     }
 }
