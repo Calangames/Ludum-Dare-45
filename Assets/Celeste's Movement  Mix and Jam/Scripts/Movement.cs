@@ -18,6 +18,16 @@ public class Movement : MonoBehaviour
     public float slideSpeed = 5;
     public float wallJumpLerp = 10;
     public float dashSpeed = 20;
+    public UnlockedMoves unlockedMoves = UnlockedMoves.walk;
+
+    public enum UnlockedMoves
+    {
+        walk,
+        walkJump,
+        walkJumpWall,
+        walkJumpWallDash,
+        walkJumpWallDashDoubleJump
+    }
 
     [Space]
     [Header("Booleans")]
@@ -31,8 +41,11 @@ public class Movement : MonoBehaviour
 
     private bool groundTouch;
     private bool hasDashed;
+    private int remainingJumps;
 
-    public int side = 1, remainingJumps = 2;
+    [Space]
+
+    public int side = 1;
 
     [Space]
     [Header("Polish")]
@@ -41,12 +54,16 @@ public class Movement : MonoBehaviour
     public ParticleSystem wallJumpParticle;
     public ParticleSystem slideParticle;
 
+    private BetterJumping betterJumping;
+
     // Start is called before the first frame update
     void Start()
     {
         coll = GetComponent<Collision>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<AnimationScript>();
+        betterJumping = GetComponent<BetterJumping>();
+        remainingJumps = (int)unlockedMoves == 4 ? 2 : 1;
     }
 
     // Update is called once per frame
@@ -61,7 +78,7 @@ public class Movement : MonoBehaviour
         Walk(dir);
         anim.SetHorizontalMovement(x, y, rb.velocity.y);
 
-        if (coll.onWall && Input.GetButton("Fire3") && canMove)
+        if ((int)unlockedMoves >= 2 && coll.onWall && Input.GetButton("Fire3") && canMove)
         {
             if(side != coll.wallSide)
                 anim.Flip(side*-1);
@@ -78,7 +95,7 @@ public class Movement : MonoBehaviour
         if (coll.onGround && !isDashing)
         {
             wallJumped = false;
-            GetComponent<BetterJumping>().enabled = true;
+            betterJumping.enabled = true;
         }
         
         if (wallGrab && !isDashing)
@@ -96,36 +113,37 @@ public class Movement : MonoBehaviour
             rb.gravityScale = 3;
         }
 
-        if(coll.onWall && !coll.onGround)
+        if((int)unlockedMoves >= 2 && coll.onWall && !coll.onGround)
         {
             if (x != 0 && !wallGrab)
             {
                 wallSlide = true;
-                remainingJumps = 1;
+
                 WallSlide();
-            }
+                remainingJumps = 1;
+            }            
         }
 
         if (!coll.onWall || coll.onGround)
             wallSlide = false;
 
-        if (Input.GetButtonDown("Jump"))
+        if ((int)unlockedMoves >= 1 && Input.GetButtonDown("Jump"))
         {
             anim.SetTrigger("jump");
 
-            if (coll.onGround || (!coll.onWall && remainingJumps > 0))
+            if (coll.onGround || ((int)unlockedMoves >= 4 && !coll.onWall && remainingJumps > 0))
             {
                 Jump(Vector2.up, false);
                 remainingJumps --;
             }
-            else if (coll.onWall && remainingJumps > 0)
+            else if ((int)unlockedMoves >= 2 && coll.onWall && remainingJumps > 0)
             {
                 WallJump();
-                remainingJumps = 1;
+                remainingJumps = (int)unlockedMoves == 4 ? 1 : 0;
             }
         }
 
-        if (Input.GetButtonDown("Fire1") && !hasDashed)
+        if ((int)unlockedMoves >= 3 && Input.GetButtonDown("Fire1") && !hasDashed)
         {
             if(xRaw != 0 || yRaw != 0)
                 Dash(xRaw, yRaw);
@@ -157,15 +175,13 @@ public class Movement : MonoBehaviour
             side = -1;
             anim.Flip(side);
         }
-
-
     }
 
     void GroundTouch()
     {
         hasDashed = false;
         isDashing = false;
-        remainingJumps = 2;
+        remainingJumps = (int)unlockedMoves == 4 ? 2 : 1;
 
         side = anim.sr.flipX ? -1 : 1;
 
@@ -197,7 +213,7 @@ public class Movement : MonoBehaviour
 
         dashParticle.Play();
         rb.gravityScale = 0;
-        GetComponent<BetterJumping>().enabled = false;
+        betterJumping.enabled = false;
         wallJumped = true;
         isDashing = true;
 
@@ -205,7 +221,7 @@ public class Movement : MonoBehaviour
 
         dashParticle.Stop();
         rb.gravityScale = 3;
-        GetComponent<BetterJumping>().enabled = true;
+        betterJumping.enabled = true;
         wallJumped = false;
         isDashing = false;
     }

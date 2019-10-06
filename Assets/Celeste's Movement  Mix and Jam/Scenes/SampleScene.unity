@@ -4559,13 +4559,13 @@ MonoBehaviour:
   slideSpeed: 1
   wallJumpLerp: 10
   dashSpeed: 40
+  unlockedMoves: 0
   canMove: 1
   wallGrab: 0
   wallJumped: 0
   wallSlide: 0
   isDashing: 0
   side: 1
-  remainingJumps: 2
   dashParticle: {fileID: 786101203}
   jumpParticle: {fileID: 708599380}
   wallJumpParticle: {fileID: 423702326}
@@ -14280,6 +14280,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420034}
   - component: {fileID: 519420035}
+  - component: {fileID: 519420030}
   m_Layer: 9
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -14295,6 +14296,20 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f786e52e3f66b5e40870047c990fb916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 213030896}
+  tilemap: {fileID: 172095590}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
