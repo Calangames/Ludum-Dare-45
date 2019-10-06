@@ -32,7 +32,7 @@ public class Movement : MonoBehaviour
     private bool groundTouch;
     private bool hasDashed;
 
-    public int side = 1;
+    public int side = 1, remainingJumps = 2;
 
     [Space]
     [Header("Polish")]
@@ -101,6 +101,7 @@ public class Movement : MonoBehaviour
             if (x != 0 && !wallGrab)
             {
                 wallSlide = true;
+                remainingJumps = 1;
                 WallSlide();
             }
         }
@@ -112,10 +113,16 @@ public class Movement : MonoBehaviour
         {
             anim.SetTrigger("jump");
 
-            if (coll.onGround)
+            if (coll.onGround || (!coll.onWall && remainingJumps > 0))
+            {
                 Jump(Vector2.up, false);
-            if (coll.onWall && !coll.onGround)
+                remainingJumps --;
+            }
+            else if (coll.onWall && remainingJumps > 0)
+            {
                 WallJump();
+                remainingJumps = 1;
+            }
         }
 
         if (Input.GetButtonDown("Fire1") && !hasDashed)
@@ -158,6 +165,7 @@ public class Movement : MonoBehaviour
     {
         hasDashed = false;
         isDashing = false;
+        remainingJumps = 2;
 
         side = anim.sr.flipX ? -1 : 1;
 
@@ -222,7 +230,7 @@ public class Movement : MonoBehaviour
 
         Vector2 wallDir = coll.onRightWall ? Vector2.left : Vector2.right;
 
-        Jump((Vector2.up / 1.5f + wallDir / 1.5f), true);
+        Jump(((Vector2.up) + wallDir / 1.5f), true);
 
         wallJumped = true;
     }
