@@ -11,6 +11,8 @@ public class Movement : MonoBehaviour
     public Rigidbody2D rb;
     private AnimationScript anim;
 
+    public static Movement instance = null;
+
     [Space]
     [Header("Stats")]
     public float speed = 10f;
@@ -59,6 +61,11 @@ public class Movement : MonoBehaviour
     public ParticleSystem slideParticle;
 
     private BetterJumping betterJumping;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()

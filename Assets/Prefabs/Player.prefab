@@ -4881,7 +4881,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1571135902733496151, guid: 107bb32cbbfbf1244b71abbb2bfb48f9,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4942,7 +4942,7 @@ GameObject:
   - component: {fileID: 971984026965099583}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4955,7 +4955,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971984026965099553}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.1, y: -2.19, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 971984026955999288}
@@ -5017,14 +5017,18 @@ MonoBehaviour:
   rb: {fileID: 0}
   speed: 7
   jumpForce: 12
+  knockbackForce: 4
   slideSpeed: 1
   wallJumpLerp: 10
   dashSpeed: 40
+  life: 3
   unlockedMoves: 4
   canMove: 1
   wallJumped: 0
   wallSlide: 0
   isDashing: 0
+  knockback: 0
+  dead: 0
   side: 1
   dashParticle: {fileID: 971984027474173983}
   jumpParticle: {fileID: 971984027392478616}
