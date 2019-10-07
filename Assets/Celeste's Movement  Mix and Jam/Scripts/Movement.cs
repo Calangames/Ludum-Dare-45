@@ -169,18 +169,6 @@ public class Movement : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Hazard") && !knockback)
-        {
-            StartCoroutine(KnockbackCooldown(0.1f));
-            knockback = true;
-            life--;
-            rb.velocity = Vector2.zero;
-            rb.velocity = new Vector2(Mathf.Sign(transform.position.x - other.transform.position.x), 4f) * knockbackForce;
-        }
-    }
-
     void GroundTouch()
     {
         hasDashed = false;
@@ -305,6 +293,15 @@ public class Movement : MonoBehaviour
         canMove = false;
         yield return new WaitForSeconds(time);
         canMove = true;
+    }
+
+    public void DamageAndKnockback(Transform other, int damage)
+    {
+        StartCoroutine(KnockbackCooldown(0.1f));
+        knockback = true;
+        life -= damage;
+        rb.velocity = Vector2.zero;
+        rb.velocity = new Vector2(Mathf.Sign(transform.position.x - other.transform.position.x), 4f) * knockbackForce;
     }
 
     IEnumerator KnockbackCooldown(float time)
