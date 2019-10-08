@@ -80,13 +80,24 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (dead)
+        {
+            return;
+        }
         if (knockback)
         {
             if (coll.onGround && !recentlyKnockbacked)
             {
                 GroundTouch();
                 dead = life <= 0;
-                knockback = false;
+                if (dead)
+                {
+                    rb.velocity = Vector2.zero;
+                }
+                else
+                {
+                    knockback = false;
+                }                
             }
             return;
         }

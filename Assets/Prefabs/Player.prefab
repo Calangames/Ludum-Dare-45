@@ -5022,7 +5022,7 @@ MonoBehaviour:
   wallJumpLerp: 10
   dashSpeed: 40
   life: 3
-  unlockedMoves: 4
+  unlockedMoves: 0
   canMove: 1
   wallJumped: 0
   wallSlide: 0

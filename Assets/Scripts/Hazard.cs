@@ -10,6 +10,7 @@ public class Hazard : MonoBehaviour
     {
         if (other.CompareTag("Player") && !Movement.instance.knockback)
         {
+            Debug.Log("oxe");
             Movement.instance.DamageAndKnockback(transform, damage);
         }
     }
