@@ -854,7 +854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Hub
-    clip: {fileID: 8300000, guid: 4c49b22f9942cdd449063ee945bee73b, type: 3}
+    clip: {fileID: 8300000, guid: 8923ee8558f77b74f9eee85d349bd28f, type: 3}
     volume: 1
     pitch: 0
     spatialBlend: 0
